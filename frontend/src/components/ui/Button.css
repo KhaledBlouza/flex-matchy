@@ -1,0 +1,99 @@
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: var(--transition);
+  text-align: center;
+  border: none;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+}
+
+.btn-primary:hover:not(:disabled) {
+  background-color: #025aa5;
+}
+
+.btn-secondary {
+  background-color: var(--secondary-color);
+  color: var(--white-color);
+}
+
+.btn-secondary:hover:not(:disabled) {
+  background-color: #46b8da;
+}
+
+.btn-success {
+  background-color: var(--success-color);
+  color: var(--white-color);
+}
+
+.btn-success:hover:not(:disabled) {
+  background-color: #449d44;
+}
+
+.btn-danger {
+  background-color: var(--danger-color);
+  color: var(--white-color);
+}
+
+.btn-danger:hover:not(:disabled) {
+  background-color: #c9302c;
+}
+
+.btn-outline-primary {
+  background-color: transparent;
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+}
+
+.btn-outline-primary:hover:not(:disabled) {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+}
+
+.btn-outline-secondary {
+  background-color: transparent;
+  border: 1px solid var(--secondary-color);
+  color: var(--secondary-color);
+}
+
+.btn-outline-secondary:hover:not(:disabled) {
+  background-color: var(--secondary-color);
+  color: var(--white-color);
+}
+
+.btn-small {
+  padding: 6px 12px;
+  font-size: 14px;
+}
+
+.btn-medium {
+  padding: 10px 20px;
+  font-size: 16px;
+}
+
+.btn-large {
+  padding: 12px 24px;
+  font-size: 18px;
+}
+
+.btn-full {
+  width: 100%;
+}
+
+.btn:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+/* Styles pour les boutons avec icônes */
+.btn svg {
+  margin-right: 8px;
+}
