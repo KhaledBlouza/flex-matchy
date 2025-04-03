@@ -1,4 +1,4 @@
-/ backend/utils/appError.js
+// backend/utils/appError.js
 // Classe personnalisée pour gérer les erreurs
 class AppError extends Error {
   constructor(message, statusCode) {
