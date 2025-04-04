@@ -34,19 +34,18 @@ router.post(
   '/plans',
   authController.restrictTo('gymOwner'),
   gymSubscriptionController.createGymSubscriptionPlan
-
 );
 
 router.patch(
   '/plans/:planId',
   authController.restrictTo('gymOwner'),
-  gymSubscriptionController.updateSubscriptionPlan
+  gymSubscriptionController.updateGymSubscription  // Corrigé: updateSubscriptionPlan → updateGymSubscription
 );
 
 router.delete(
   '/plans/:planId',
   authController.restrictTo('gymOwner'),
-  gymSubscriptionController.deleteSubscriptionPlan
+  gymSubscriptionController.deleteGymSubscription  // Corrigé: deleteSubscriptionPlan → deleteGymSubscription
 );
 
 router.get(

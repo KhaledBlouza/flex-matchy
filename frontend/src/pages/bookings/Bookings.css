@@ -1,0 +1,231 @@
+.bookings-page {
+    padding: 40px 0;
+  }
+  
+  .page-title {
+    margin-bottom: 30px;
+    color: var(--dark-color);
+  }
+  
+  .filters-sort {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  
+  .filter-container,
+  .sort-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .filter-icon {
+    color: var(--dark-gray-color);
+    font-size: 20px;
+  }
+  
+  .filter-container .form-group,
+  .sort-container .form-group {
+    margin-bottom: 0;
+    width: 200px;
+  }
+  
+  .bookings-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .booking-card {
+    display: flex;
+    padding: 20px;
+  }
+  
+  .booking-date {
+    min-width: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 20px;
+  }
+  
+  .date-box {
+    width: 70px;
+    height: 70px;
+    background-color: var(--gray-color);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+  
+  .date-day {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--dark-color);
+  }
+  
+  .date-month {
+    font-size: 14px;
+    text-transform: uppercase;
+    color: var(--dark-gray-color);
+  }
+  
+  .date-time {
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: 5px;
+  }
+  
+  .date-full {
+    font-size: 12px;
+    color: var(--dark-gray-color);
+    text-align: center;
+  }
+  
+  .booking-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .booking-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 15px;
+  }
+  
+  .booking-title {
+    margin: 0;
+    font-size: 1.2rem;
+    color: var(--dark-color);
+  }
+  
+  .booking-details {
+    margin-bottom: 20px;
+  }
+  
+  .booking-detail {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+    color: var(--dark-gray-color);
+  }
+  
+  .booking-detail svg {
+    color: var(--dark-gray-color);
+    font-size: 16px;
+  }
+  
+  .booking-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+  }
+  
+  .booking-price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--primary-color);
+  }
+  
+  .booking-actions {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .no-bookings {
+    background-color: var(--white-color);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    padding: 50px 20px;
+    text-align: center;
+  }
+  
+  .no-bookings-icon {
+    font-size: 60px;
+    color: var(--gray-color);
+    margin-bottom: 20px;
+  }
+  
+  .no-bookings h2 {
+    margin-bottom: 10px;
+    color: var(--dark-color);
+  }
+  
+  .no-bookings p {
+    color: var(--dark-gray-color);
+    margin-bottom: 30px;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .no-bookings-actions {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+  }
+  
+  .loader-container {
+    display: flex;
+    justify-content: center;
+    padding: 50px 0;
+  }
+  
+  .mb-4 {
+    margin-bottom: 20px;
+  }
+  
+  @media (max-width: 768px) {
+    .booking-card {
+      flex-direction: column;
+    }
+    
+    .booking-date {
+      flex-direction: row;
+      align-items: center;
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
+    
+    .date-box {
+      margin-bottom: 0;
+      margin-right: 15px;
+    }
+    
+    .date-full {
+      display: none;
+    }
+    
+    .filters-sort {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 15px;
+    }
+    
+    .filter-container .form-group,
+    .sort-container .form-group {
+      width: 100%;
+    }
+    
+    .booking-footer {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 15px;
+    }
+    
+    .booking-actions {
+      width: 100%;
+      justify-content: space-between;
+    }
+  }

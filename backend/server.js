@@ -23,14 +23,9 @@ const DB = process.env.DATABASE.replace(
   process.env.DATABASE_PASSWORD
 );
 
-// Connexion à MongoDB
+// Connexion à MongoDB - Version simplifiée sans options dépréciées
 mongoose
-  .connect(DB, {
-    useNewUrlParser: true,
-    useCreateIndex: true,
-    useFindAndModify: false,
-    useUnifiedTopology: true
-  })
+  .connect(DB)
   .then(() => console.log('Connexion à la base de données réussie!'));
 
 // Créer le serveur HTTP

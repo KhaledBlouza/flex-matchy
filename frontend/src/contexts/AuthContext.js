@@ -1,7 +1,7 @@
 // frontend/src/contexts/AuthContext.js
 import React, { createContext, useContext, useState, useCallback } from 'react';
 import axios from 'axios';
-import jwt_decode from 'jwt-decode';
+import { jwtDecode as jwt_decode } from 'jwt-decode';
 import { toast } from 'react-toastify';
 import api from '../services/api';
 
