@@ -6,6 +6,7 @@ const http = require('http');
 
 // Gestion des exceptions non capturées
 process.on('uncaughtException', err => {
+  console.log('Erreur levée depuis:', err.stack);
   console.log('UNCAUGHT EXCEPTION! 💥 Shutting down...');
   console.log(err.name, err.message);
   process.exit(1);

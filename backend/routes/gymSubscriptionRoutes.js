@@ -33,7 +33,8 @@ router.patch(
 router.post(
   '/plans',
   authController.restrictTo('gymOwner'),
-  gymSubscriptionController.createSubscriptionPlan
+  gymSubscriptionController.createGymSubscriptionPlan
+
 );
 
 router.patch(

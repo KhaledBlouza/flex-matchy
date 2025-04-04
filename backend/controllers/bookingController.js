@@ -1,5 +1,5 @@
 // backend/controllers/bookingController.js
-const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
+const stripe = require('../utils/stripe');
 const Booking = require('../models/bookingModel');
 const Service = require('../models/serviceModel');
 const SportField = require('../models/sportFieldModel');

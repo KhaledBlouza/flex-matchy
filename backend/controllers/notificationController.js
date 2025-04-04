@@ -1,5 +1,9 @@
 // backend/controllers/notificationController.js
 const { sendNotification } = require('../utils/socketManager');
+const catchAsync = require('../utils/catchAsync');
+
+const Notification = require('../models/notificationModel');
+const AppError = require('../utils/appError');
 
 
 // Obtenir les notifications de l'utilisateur connecté

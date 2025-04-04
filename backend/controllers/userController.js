@@ -294,3 +294,31 @@ exports.getUser = factory.getOne(User);
 exports.createUser = factory.createOne(User);
 exports.updateUser = factory.updateOne(User);
 exports.deleteUser = factory.deleteOne(User);
+
+exports.searchUsersForChat = catchAsync(async (req, res, next) => {
+  const { query } = req.query;
+
+  if (!query) {
+    return next(new AppError('Le champ de recherche est requis.', 400));
+  }
+
+  const searchRegex = new RegExp(query, 'i');
+
+  const users = await User.find({
+    _id: { $ne: req.user.id },
+    $or: [
+      { firstName: searchRegex },
+      { lastName: searchRegex },
+      { email: searchRegex },
+      { name: searchRegex } // utile pour salles et terrains
+    ]
+  }).select('firstName lastName name email photo role');
+
+  res.status(200).json({
+    status: 'success',
+    results: users.length,
+    data: {
+      users
+    }
+  });
+});

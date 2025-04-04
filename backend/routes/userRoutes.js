@@ -2,6 +2,11 @@
 const express = require('express');
 const userController = require('../controllers/userController');
 const authController = require('../controllers/authController');
+const notificationController = require('../controllers/notificationController');
+const conversationController = require('../controllers/conversationController');
+const subscriptionController = require('../controllers/subscriptionController');
+
+
 
 const router = express.Router();
 
@@ -26,9 +31,9 @@ router.patch(
 );
 router.delete('/deleteMe', userController.deleteMe);
 router.get('/myBookings', require('../controllers/bookingController').getMyBookings);
-router.get('/myNotifications', require('../controllers/notificationController').getMyNotifications);
-router.get('/myConversations', require('../controllers/conversationController').getMyConversations);
-router.get('/mySubscription', require('../controllers/subscriptionController').getMySubscription);
+router.get('/myNotifications', notificationController.getMyNotifications);
+router.get('/myConversations', conversationController.getMyConversations);
+router.get('/mySubscription', subscriptionController.getMySubscription);
 
 // Routes pour les favoris (clients uniquement)
 router.post('/favorites', authController.restrictTo('client'), userController.addToFavorites);

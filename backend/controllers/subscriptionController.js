@@ -1,5 +1,5 @@
 // backend/controllers/subscriptionController.js
-const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
+const stripe = require('../utils/stripe');
 const Subscription = require('../models/subscriptionModel');
 const User = require('../models/userModel');
 const Coach = require('../models/coachModel');
@@ -517,3 +517,4 @@ exports.getAllSubscriptions = factory.getAll(Subscription);
 exports.getSubscription = factory.getOne(Subscription);
 exports.updateSubscription = factory.updateOne(Subscription);
 exports.deleteSubscription = factory.deleteOne(Subscription);
+exports.createSubscription = factory.createOne(Subscription);
